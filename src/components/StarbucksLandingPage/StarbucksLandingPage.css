@@ -1,0 +1,250 @@
+/* ✅ MAIN CONTAINER */
+.main {
+    min-height: 80vh;
+    background: white;
+    overflow: hidden;
+}
+
+/* ✅ FLEX LAYOUT */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* ✅ LEFT TEXT SECTION */
+.left-content {
+    flex: 1;
+    min-width: 280px;
+}
+
+/* ✅ ROUNDED SEMICIRCLE */
+/* .rounded-container {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+
+.rounded-shape {
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    border-top-left-radius: 100%;
+} */
+
+/* ✅ TEXT STYLES */
+.heading1 {
+    font-size: 3rem;
+}
+
+.heading2 {
+    font-size: 3.5rem;
+}
+
+.heading2 span {
+    font-family: "Boldonse", system-ui;
+    color: green;
+    font-size: 2.6rem;
+}
+
+.heading3 {
+    max-width: 35rem;
+}
+
+/* ✅ BUTTON */
+.button {
+    width: 10rem;
+    border-radius: 3rem;
+    height: 3.5rem;
+    background: green;
+    color: white;
+    border: 0;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+/* .icon {
+    position: absolute;
+    left: 0;
+    bottom: 120px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+} */
+
+
+
+/* 🛠️ Fix .rounded-container positioning */
+.rounded-container {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+}
+
+/* 🛠️ Keep rounded shape as background */
+.rounded-shape {
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    border-top-left-radius: 100%;
+    position: relative;
+    /* Important for stacking */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🛠️ Fix main coffee cup image */
+.icon {
+    position: absolute;
+    width: 100%;
+    max-width: 250px;
+    height: 28rem;
+    /* object-fit: contain; */
+    bottom: 140px;
+    left: 0;
+}
+
+
+.iconSmall {
+    height: 100px;
+    transition: transform 0.3s ease, margin 0.3s ease;
+    cursor: pointer;
+}
+
+.iconSmall:nth-child(1) {
+    margin-top: 10px;
+}
+
+.iconSmall:nth-child(2) {
+    margin-top: 10px;
+}
+
+.iconSmall:nth-child(3) {
+    height: 110px;
+    margin-top: 5px;
+}
+
+/* Hover animation */
+.iconSmall:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+    width: auto;
+    gap: 3rem;
+    margin-right: 10rem;
+}
+
+/* ✅ RESPONSIVENESS */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .right-content {
+        justify-content: center;
+    }
+
+    .rounded-container {
+        margin-top: 10rem;
+        position: relative;
+    }
+
+    .rounded-shape {
+        border-radius: 100%;
+    }
+
+    .heading3 {
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .right-content {
+        justify-content: center;
+    }
+
+    .rounded-container {
+        margin-top: 10rem;
+        position: relative;
+    }
+
+    .rounded-shape {
+        border-radius: 100%;
+    }
+
+    .heading3 {
+        max-width: 100%;
+    }
+
+    .icon {
+        max-width: 280px;
+        bottom: 140px;
+        left: 3.5rem;
+    }
+
+    .iconContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4rem;
+        width: auto;
+        gap: 3rem;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading1 {
+        font-size: 2rem;
+    }
+
+    .heading2 {
+        font-size: 2.5rem;
+    }
+
+    .heading2 span {
+        font-size: 2rem;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .icon {
+        max-width: 240px;
+        bottom: 130px;
+        position: absolute;
+    }
+
+    .iconContainer {
+       margin-bottom: 20px;
+    }
+}
